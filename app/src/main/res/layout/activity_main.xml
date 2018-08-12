@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.faraz.app.count.ui.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:padding="5dp">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.75"
+            android:layout_marginEnd="10dp"
+            android:hint="type url"
+            android:inputType="textUri"
+            android:padding="5dp"
+            android:id="@+id/etUrl"
+            android:background="@drawable/rectangle_border_gray"/>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Fetch"
+                android:id="@+id/btnFetch"
+                android:textColor="#fff"
+                android:background="@drawable/rounded_border_background" />
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/pbFetch"
+                android:theme="@style/AppTheme.WhiteAccent"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                android:elevation="3dp"
+                />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rvWordsCount"/>
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/fabFilter"
+        android:visibility="gone"
+        android:src="@drawable/ic_filter_list_black_24dp"
+        tools:visibility="visible"/>
+
+</android.support.design.widget.CoordinatorLayout>
